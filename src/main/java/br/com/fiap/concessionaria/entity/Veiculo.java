@@ -1,5 +1,6 @@
 package br.com.fiap.concessionaria.entity;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,9 +15,13 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 
-
+@Entity
+@Table(name = "TB_VEICULO")
 public class Veiculo {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_VEICULO")
+    @SequenceGenerator(name = "SQ_VEICULO", sequenceName = "SQ_VEICULO", allocationSize = 1)
+    @Column(name = "ID_VEICULO")
     private Long id;
 
     private String nome;
@@ -31,13 +36,46 @@ public class Veiculo {
 
     private String modelo;
 
-    //15 digitos
+    @Column(length = 15)
     private String palavraDeEfeito;
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinColumn(
+            name = "FABRICANTE",
+            referencedColumnName = "ID_FABRICANTE",
+            foreignKey = @ForeignKey(name = "FK_VEICULO_FABRICANTE")
+    )
     private Fabricante fabricante;
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinColumn(
+            name = "TIPOVEICULO",
+            referencedColumnName = "ID_TIPOVEICULO",
+            foreignKey = @ForeignKey(name = "FK_VEICULO_TIPOVEICULO")
+    )
     private TipoVeiculo tipo;
 
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinTable(
+            name = "TB_ACESSORIO_VEICULO",
+            joinColumns = {
+                    @JoinColumn(
+                            name = "VEICULO",
+                            referencedColumnName = "ID_VEICULO",
+                            foreignKey = @ForeignKey(
+                                    name = "FK_VEICULO_ACESSORIO"
+                            )
+                    )
+            },
+            inverseJoinColumns = {
+                    @JoinColumn(
+                            name = "ACESSORIO",
+                            referencedColumnName = "ID_ACESSORIO",
+                            foreignKey = @ForeignKey(
+                                    name = "FK_ACESSORIO_VEICULO"
+                            )
+                    )
+            }
+    )
     private Set<Acessorio> acessorios = new LinkedHashSet<>();
-
 }
