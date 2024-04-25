@@ -17,10 +17,10 @@ public record VeiculoRequest(
         String nome,
         @Valid
         @NotNull(message = "Tipo do veículo deve ser informado")
-        AbstractRequest tipo,
+        TipoVeiculoRequest tipo,
         @Valid
         @NotNull(message = "Fabricante do veiculo deve ser informado")
-        AbstractRequest fabricante,
+        FabricanteRequest fabricante,
         @NotNull(message = "Cor do veículo deve ser informada")
         String cor,
         @NotNull(message = "Palavra de efeito do veículo deve ser informada")

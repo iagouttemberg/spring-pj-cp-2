@@ -1,7 +1,10 @@
 package br.com.fiap.concessionaria.dto.response;
 
+import lombok.Builder;
+
 import java.time.Year;
 
+@Builder
 public record VeiculoResponse(
         String modelo,
         Year anoDeFabricacao,
