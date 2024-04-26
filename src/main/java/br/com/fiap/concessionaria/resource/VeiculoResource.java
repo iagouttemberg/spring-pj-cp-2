@@ -24,7 +24,7 @@ import java.util.Collection;
 import java.util.Objects;
 
 @RestController
-@RequestMapping(value = "/veiculo")
+@RequestMapping(value = "/veiculos")
 public class VeiculoResource implements ResourceDTO<Veiculo, VeiculoRequest, VeiculoResponse>{
     @Autowired
     private VeiculoService veiculoService;

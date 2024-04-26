@@ -37,7 +37,7 @@ public class TipoVeiculoService implements ServiceDTO<TipoVeiculo, TipoVeiculoRe
 
     @Override
     public Collection<TipoVeiculo> findAll(Example<TipoVeiculo> example) {
-        return tipoVeiculoRepository.findAll();
+        return tipoVeiculoRepository.findAll(example);
     }
 
     @Override

@@ -1,0 +1,645 @@
+{
+	"info": {
+		"_postman_id": "cf51c29f-75c1-49a0-bea3-853882ef1f26",
+		"name": "Testes Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33686874"
+	},
+	"item": [
+		{
+			"name": "Acessório",
+			"item": [
+				{
+					"name": "localhost/acessorio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Aerofólio\",\r\n  \"preco\": 39.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/acessorio",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"acessorio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/acessorio",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/acessorio?nome=Aerofólio",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"acessorio"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Aerofólio"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/acessorio/{id}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/acessorio/1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"acessorio",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tipo de Veículo",
+			"item": [
+				{
+					"name": "localhost/tipo-de-veiculo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"SUV\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/tipo-de-veiculo",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"tipo-de-veiculo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/tipo-de-veiculo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/tipo-de-veiculo?nome=SUV",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"tipo-de-veiculo"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "SUV"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/tipo-de-veiculo/{id}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/tipo-de-veiculo/1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"tipo-de-veiculo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fabricante",
+			"item": [
+				{
+					"name": "localhost/fabricantes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Toyota\",\r\n  \"nomeFantasia\": \"Toyota Motors\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/fabricantes",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"fabricantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/fabricantes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/fabricantes?nome=Toyota",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"fabricantes"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Toyota"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/fabricantes/{id}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/fabricantes/1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"fabricantes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Veículo",
+			"item": [
+				{
+					"name": "localhost/veiculos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipo\": {\r\n    \"id\": 1\r\n  },\r\n  \"fabricante\": {\r\n    \"id\": 1\r\n  },\r\n  \"modelo\": \"RAV4\",\r\n  \"anoDeFabricacao\": 2022,\r\n  \"cor\": \"Prata\",\r\n  \"preco\": 75000.00,\r\n  \"nome\": \"Toyota RAV4\",\r\n  \"palavraDeEfeito\": \"SUV moderno\",\r\n  \"cilindradas\": 2000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/veiculos",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"veiculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/veiculos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/veiculos?modelo=RAV4",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"veiculos"
+							],
+							"query": [
+								{
+									"key": "modelo",
+									"value": "RAV4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/veiculos/{id}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/veiculos/1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"veiculos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/veiculos/{id}/acessorios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Teto Solar\",\r\n  \"preco\": \"1000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/veiculos/1/acessorios",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"veiculos",
+								"1",
+								"acessorios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/veiculos/{id}/acessorios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/veiculos/1/acessorios",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"veiculos",
+								"1",
+								"acessorios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Característica",
+			"item": [
+				{
+					"name": "localhost/caracteristicas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"veiculo\": {\r\n    \"id\": 1,\r\n    \"tipo\": {\r\n      \"id\": 1\r\n    },\r\n    \"fabricante\": {\r\n      \"id\": 1\r\n    }\r\n  },\r\n  \"nome\": \"Característica\",\r\n  \"descricao\": \"Blindado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/caracteristicas",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"caracteristicas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/caracteristicas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/caracteristicas?descricao=Blindado",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"caracteristicas"
+							],
+							"query": [
+								{
+									"key": "descricao",
+									"value": "Blindado"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/caracteristicas/{id}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/caracteristicas/1",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"caracteristicas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Loja",
+			"item": [
+				{
+					"name": "localhost/loja",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Automóveis\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/loja",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"loja"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/loja",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/loja?nome=Automóveis",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"loja"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Automóveis"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost/loja/{id}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/loja/3",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"loja",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

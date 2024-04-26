@@ -10,6 +10,7 @@ import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -33,9 +34,14 @@ public class LojaService implements ServiceDTO<Loja, LojaRequest, LojaResponse>{
     public LojaResponse toResponse(Loja e) {
         if (Objects.isNull(e)) return null;
 
-        Set<VeiculoResponse> veiculosComercializados = e.getVeiculosComercializados().stream()
-                .map(veiculoService::toResponse)
-                .collect(Collectors.toSet());
+        Set<VeiculoResponse> veiculosComercializados;
+        if (Objects.isNull(e.getVeiculosComercializados())) {
+            veiculosComercializados = Collections.emptySet();
+        } else {
+            veiculosComercializados = e.getVeiculosComercializados().stream()
+                    .map(veiculoService::toResponse)
+                    .collect(Collectors.toSet());
+        }
 
         return new LojaResponse(e.getNome(), veiculosComercializados, e.getId());
     }
@@ -43,7 +49,7 @@ public class LojaService implements ServiceDTO<Loja, LojaRequest, LojaResponse>{
 
     @Override
     public Collection<Loja> findAll(Example<Loja> example) {
-        return lojaRepository.findAll();
+        return lojaRepository.findAll(example);
     }
 
     @Override

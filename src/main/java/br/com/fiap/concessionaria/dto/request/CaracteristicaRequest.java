@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Size;
 public record CaracteristicaRequest(
         @Valid
         @NotNull(message = "Veiculo deve ser informado")
-        VeiculoRequest veiculo,
+        AbstractRequest veiculo,
         @NotNull(message = "Nome da característica deve ser informado")
         @Size(min = 1, max = 30)
         String nome,

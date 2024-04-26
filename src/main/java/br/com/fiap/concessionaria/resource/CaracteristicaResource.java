@@ -3,6 +3,7 @@ package br.com.fiap.concessionaria.resource;
 import br.com.fiap.concessionaria.dto.request.CaracteristicaRequest;
 import br.com.fiap.concessionaria.dto.response.CaracteristicaResponse;
 import br.com.fiap.concessionaria.entity.Caracteristica;
+import br.com.fiap.concessionaria.entity.Fabricante;
 import br.com.fiap.concessionaria.entity.TipoVeiculo;
 import br.com.fiap.concessionaria.entity.Veiculo;
 import br.com.fiap.concessionaria.service.CaracteristicaService;
@@ -33,6 +34,10 @@ public class CaracteristicaResource implements ResourceDTO<Caracteristica, Carac
             @RequestParam(name = "veiculo.anoDeFabricacao", required = false) Year veiculoAnoDeFabricacao,
             @RequestParam(name = "veiculo.nome", required = false) String veiculoNome,
             @RequestParam(name = "veiculo.tipo", required = false) TipoVeiculo veiculoTipo,
+            @RequestParam(name = "veiculo.fabricante", required = false) Fabricante veiculoFabricante,
+            @RequestParam(name = "veiculo.cor", required = false) String veiculoCor,
+            @RequestParam(name = "veiculo.palavraDeEfeito", required = false) String veiculoPalavraDeEfeito,
+            @RequestParam(name = "veiculo.cilindradas", required = false) Short veiculoCilindradas,
             @RequestParam(name = "nome", required = false) String nome,
             @RequestParam(name = "descricao", required = false) String descricao
 
@@ -44,6 +49,10 @@ public class CaracteristicaResource implements ResourceDTO<Caracteristica, Carac
                 .anoDeFabricacao(veiculoAnoDeFabricacao)
                 .nome(veiculoNome)
                 .tipo(veiculoTipo)
+                .fabricante(veiculoFabricante)
+                .cor(veiculoCor)
+                .palavraDeEfeito(veiculoPalavraDeEfeito)
+                .cilindradas(veiculoCilindradas)
                 .build();
 
         var caracteristica = Caracteristica.builder()

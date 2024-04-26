@@ -39,7 +39,7 @@ public class FabricanteService implements ServiceDTO<Fabricante, FabricanteReque
 
     @Override
     public Collection<Fabricante> findAll(Example<Fabricante> example) {
-        return fabricanteRepository.findAll();
+        return fabricanteRepository.findAll(example);
     }
 
     @Override

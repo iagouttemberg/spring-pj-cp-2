@@ -23,8 +23,8 @@ public class VeiculoService implements ServiceDTO<Veiculo, VeiculoRequest, Veicu
     @Override
     public Veiculo toEntity(VeiculoRequest dto) {
 
-        var fabricante = fabricanteService.toEntity(dto.fabricante());
-        var tipo = tipoVeiculoService.toEntity(dto.tipo());
+        var fabricante = fabricanteService.findById(dto.fabricante().id());
+        var tipo = tipoVeiculoService.findById(dto.tipo().id());
 
         return Veiculo.builder()
                 .preco(dto.preco())
@@ -35,6 +35,7 @@ public class VeiculoService implements ServiceDTO<Veiculo, VeiculoRequest, Veicu
                 .tipo(tipo)
                 .cor(dto.cor())
                 .palavraDeEfeito(dto.palavraDeEfeito())
+                .cilindradas(dto.cilindradas())
                 .build();
     }
 
@@ -55,12 +56,14 @@ public class VeiculoService implements ServiceDTO<Veiculo, VeiculoRequest, Veicu
                 .tipo(tipo)
                 .cor(e.getCor())
                 .palavraDeEfeito(e.getPalavraDeEfeito())
+                .id(e.getId())
+                .cilindradas(e.getCilindradas())
                 .build();
     }
 
     @Override
     public Collection<Veiculo> findAll(Example<Veiculo> example) {
-        return veiculoRepository.findAll();
+        return veiculoRepository.findAll(example);
     }
 
     @Override

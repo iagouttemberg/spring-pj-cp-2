@@ -39,7 +39,7 @@ public class AcessorioService implements ServiceDTO<Acessorio, AcessorioRequest,
 
     @Override
     public Collection<Acessorio> findAll(Example<Acessorio> example) {
-        return acessorioRepository.findAll();
+        return acessorioRepository.findAll(example);
     }
 
     @Override
