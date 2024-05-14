@@ -9,3 +9,11 @@ spring:
     multipart:
       max-file-size: 1GB
       max-request-size: 1GB
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - prometheus
